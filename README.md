@@ -1,5 +1,4 @@
 # postfix-calculator
-Command line-based Reverse Polish notation calculator written in Rust
 
 ## Usage
 To compile, use ```rustc```.

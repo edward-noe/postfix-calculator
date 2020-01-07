@@ -59,7 +59,7 @@ fn main() {
         else {
             match string.parse() {
                 Ok(n) => stack.push(n),
-                Err(_e) => { println!("ERROR: Invalid input"); break; },
+                Err(_e) => break,
             }
         }
         
@@ -68,10 +68,10 @@ fn main() {
             break;
         }
     }
-    print_stack(&mut stack);
+    print_stack(stack);
 }
 
-fn print_stack(stack: &mut Vec<i32>) {
+fn print_stack(stack: Vec<i32>) {
     print!("[ ");
     for (i, item) in stack.iter().enumerate() {
         if i + 1 == stack.len() {

@@ -59,7 +59,7 @@ fn main() {
         else {
             match string.parse() {
                 Ok(n) => stack.push(n),
-                Err(_e) => break,
+                Err(_e) => { println!("ERROR: Invalid input"); break; },
             }
         }
         
@@ -71,7 +71,6 @@ fn main() {
     print_stack(&mut stack);
 }
 
-// Removing mutability breaks this; not sure why
 fn print_stack(stack: &mut Vec<i32>) {
     print!("[ ");
     for (i, item) in stack.iter().enumerate() {
